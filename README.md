@@ -12,3 +12,5 @@ wget -N https://gitlab.com/rwkgyg/hysteria-yg/raw/main/hysteria.sh && bash hyste
 ![8c67d5610edfe5085b9675e29c1e448](https://user-images.githubusercontent.com/121604513/212786029-a156750f-d040-45bf-89f2-4ad565071b58.png)
 
 ### 脚本源码备份[Gitlab地址](https://gitlab.com/rwkgyg/hysteria-yg)
+### 参考项目[Hi_Hysteria](https://github.com/emptysuns/Hi_Hysteria)
+
