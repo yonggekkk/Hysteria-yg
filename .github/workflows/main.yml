@@ -1,0 +1,42 @@
+name: Build and Package
+
+on:
+  push:
+    branches: [ main ]
+  release:
+    types: [published]
+
+jobs:
+  build_and_package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Run GetRoutes.py
+        run: python3 GetRoutes.py
+
+      - name: Archive artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: routes.acl
+          path: routes.acl
+
+      - name: Package artifact
+        run: |
+          mkdir ygkkk
+          mv routes.acl ygkkk/
+          tar -czvf ygkkk.tar.gz ygkkk/
+        shell: bash
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ygkkk
+          path: ygkkk.tar.gz
