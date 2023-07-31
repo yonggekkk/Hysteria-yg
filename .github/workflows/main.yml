@@ -2,7 +2,7 @@ name: Build and Package
 
 on:
   schedule:
-    - cron: "*/1 * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
   release:
     types: [published]
