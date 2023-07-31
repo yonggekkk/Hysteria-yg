@@ -1,0 +1,36 @@
+name: Build and Package
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  build_and_package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3.5.3
+
+      - name: Install Python
+        uses: actions/setup-python@v4.7.0
+        with:
+          python-version: 3.8
+
+      - name: Run GetRoutes.py
+        run: python3 GetRoutes.py
+
+      - name: Archive
+        run: zip -r routes.zip routes.acl Country.mmdb
+          
+          
+      - name: Upload Release Asset
+        uses: svenstaro/upload-release-action@2.5.0
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+          file: routes.zip
+          asset_name: routes.zip
+          prerelease: true
+          overwrite: true
