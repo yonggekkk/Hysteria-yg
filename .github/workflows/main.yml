@@ -1,6 +1,8 @@
 name: Build and Package
 
 on:
+  schedule:
+    - cron: "*/1 * * * *"
   workflow_dispatch:
   release:
     types: [published]
