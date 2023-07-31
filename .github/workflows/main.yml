@@ -4,8 +4,8 @@ on:
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
-  release:
-    types: [published]
+ # release:
+   # types: [published]
 
 jobs:
   build_and_package:
