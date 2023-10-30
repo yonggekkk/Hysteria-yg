@@ -1,4 +1,4 @@
-## 23.10.26本项目停止更新，推荐使用[sing-box-yg脚本](https://github.com/yonggekkk/sing-box-yg)
+## 如想使用最新的Hysteria2，推荐使用[sing-box-yg脚本](https://github.com/yonggekkk/sing-box-yg)
 
 -------------------------------------------------------------
 
