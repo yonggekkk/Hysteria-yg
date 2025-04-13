@@ -13,6 +13,5 @@
 wget -N https://gitlab.com/rwkgyg/hysteria-yg/raw/main/hysteria.sh && bash hysteria.sh
 ```
 
-![8c67d5610edfe5085b9675e29c1e448](https://user-images.githubusercontent.com/121604513/212786029-a156750f-d040-45bf-89f2-4ad565071b58.png)
 
 
